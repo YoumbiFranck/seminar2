@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seminar 2</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/menu.js" defer></script>
+</head>
+<body>
+<header id="s2_mainHeader">
+    <img src="/image/layout/THM_Logo.png" alt="Logo THM" id="logoTHM" />
+    <h1>Wirtschaftsinformatik-Seminar II</h1>
+    <nav id="s2_mainNav">
+        <ul>
+                <li><a href="index.html" title="Hier werden Sie erfahren, was eine relationale Datenbank ist">Normalformen</a></li>
+            <li><a href="#" title="Funktionale Abhängigkeiten und Schlüsselkandidaten">Info</a></li>
+        </ul>
+    </nav>
+    <button id="menuToggle"><img src="/image/layout/hamburger.svg" alt="Menu öffen 7 Schließen" /></button>
+</header><!--Ici se termine le #mainHeader-->
+
+        <div id="mainContent">
+            <div id="inhalt" class="aside">
+                <p>Inhaltsverzeichnis</p>
+                <ul class= "navigation">
+                     <li class="selected">Was ist die Normalisierung ?</li>
+                     <li> Warum sind die Normalformen so wichtig ?</li>
+                     <li> Was sind die Vorteile der Normalisierung ?</li>
+                     <li> Was sind die Prinzipien der Normalisierung ? </li>
+                </ul>
+            </div>
+            <main class="test" id="main">
+                <h1> Normalisierung von Datenbanken </h1>
+                    <div>
+                        <p>
+                            Der Entwurfsprozess einer relationalen Datenbank kann manchmal zu unerwünschten Anomalien oder technischen Problemen auf Datenbankebene führen. Diese Anomalien können wiederum die Verarbeitung und Wartung der Datenbank erschweren. Zu den häufigsten Anomalien gehört die Redundanz von Daten. Diese redundanten Daten wirken sich zunächst auf den Speicherplatz aus, aber auch auf die Operationen, die wir bei der Datenverarbeitung durchführen, wie das Hinzufügen, Aktualisieren und Löschen von Daten in der Datenbank.
+                            Normalisierung ist eine Strategie zur Beseitigung von Redundanzen in relationalen Datenbanken. In diesem Kurs zeigen wir Ihnen durch konkrete Beispiele, wie Sie die Normalformen in Datenbanken implementieren können. Sie werden in der Lage sein, Daten in einer echten Datenbank zu bearbeiten, um zu verstehen, warum die Normalformen so wichtig sind.
+                        </p>
+                    </div>
+                <section class="section">
+                    <h2> Was versteht man unter dem Begriff Normalisierung ? </h2>
+                        <div>
+                            <p>
+                                Die Normalisierung ist ein Prozess, der darauf abzielt, die Modellierung des relationalen Modells zu optimieren und zu verbessern. Dieser Prozess basiert auf der Reorganisation der Datenbanktabellen und der Verknüpfungen zwischen diesen Tabellen, um Redundanzen und die zugrunde liegenden Probleme beim Einfügen, Aktualisieren und Löschen, die in der Datenbank auftreten können, zu beseitigen.
+                            </p>
+                        </div>
+                </section>
+
+                <section class="section">
+
+                    <h2> Warum sind die Normalformen so wichtig ? </h2>
+                    <div>
+                        <p>
+                            Um Ihnen die Notwendigkeit der Normalisierung Ihrer Datenbanken zu verdeutlichen, werde ich Ihnen ein Beispiel für eine Datenbanktabelle einer Universität geben, die Sprachkurse für ausländische Studenten anbietet. An dieser Universität werden die Studierenden durch eine Matrikelnummer identifiziert. Um an einem Sprachkurs teilzunehmen, müssen sie einen Betrag bezahlen und am Ende des Sprachkurses erhalten sie eine Note.
+                            In dieser Tabelle werden also alle Studierende repräsentiert, die sich an dieser Universität immatrikuliert und einen Sprachkurs absolviert haben.
+                        </p>
+
+                        <p>
+                            Wir stellen fest, dass diese Tabelle einige Anomalien aufweist.
+                            Was ist die erste Anomalie, die Ihnen auffällt?
+                        </p>
+
+                        <button id="show_anomaly" class="button1">Anomalie Anzeigen</button>
+                        
+                        <table id="customers">
+                            <tr>
+                                <th>Matrikelnummer</th>
+                                <th>Studentenname</th>
+                                <th>Imatrikulationsdatum</th>
+                                <th>email</th>
+                                <th>KursNr</th>
+                                <th>Kurs</th>
+                                <th>Matrikel Dozent</th>
+                                <th>Name Dozent</th>
+                                <th>Anmeldedatum</th>
+                                <th>Betrag</th>
+                                <th>Note </th>
+                            </tr>
+
+                            <tr id="case1">
+                                <td class="adara">7073</td>
+                                <td class="adara">Adara Love</td>
+                                <td class="adara">Jan 23, 2020</td>
+                                <td class="adara">viverra@google.edu</td>
+                                <td>891</td>
+                                <td>Chinesisch</td>
+                                <td>5661</td>
+                                <td> Addam Will</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2242</td>
+                                <td>Brandon Leblanc</td>
+                                <td>Jun 29, 2020</td>
+                                <td>sed.malesuada.augue@yahoo.org</td>
+                                <td>580</td>
+                                <td>Englisch</td>
+                                <td>4627</td>
+                                <td> Kamir Sarr</td>
+                                <td>Feb 11, 2021</td>
+                                <td>59.99€</td>
+                                <td>3</td>
+                            </tr>
+                            <tr id="case2">
+                                <td class="adara">7073</td>
+                                <td class="adara">Adara Love</td>
+                                <td class="adara">Jan 23, 2020</td>
+                                <td class="adara">viverra@google.edu</td>
+                                <td>313</td>
+                                <td>Französisch</td>
+                                <td>7938</td>
+                                <td>Dadi Mann</td>
+                                <td>Jun 19, 2021</td>
+                                <td>49.40€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8137</td>
+                                <td class="adara2">Kevin Estrada</td>
+                                <td>Dec 30, 2020</td>
+                                <td>nullam.enim.sed@outlook.org</td>
+                                <td class="adara">550</td>
+                                <td class="adara">Deutsch</td>
+                                <td class="adara">5661</td>
+                                <td class="adara">Max Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1202</td>
+                                <td>Yardley Carrillo</td>
+                                <td>May 1, 2020</td>
+                                <td>risus.quis.diam@hotmail.edu</td>
+                                <td>763</td>
+                                <td>Fefe</td>
+                                <td>5661</td>
+                                <td>ElMouhamadoukaleb Maier</td>
+                                <td>Jun 11, 2021</td>
+                                <td>60.28€</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>8738</td>
+                                <td class="adara2">Liman Müller</td>
+                                <td>Dec 30, 2020</td>
+                                <td>liman@outlook.org</td>
+                                <td class="adara">550</td>
+                                <td class="adara">Deutsch</td>
+                                <td class="adara">5661</td>
+                                <td class="adara">Max Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                        <span>Auszug aus einer nicht normalisierten Datenbanktabelle.</span>
+                        <p>
+                            Das Erste, was uns in unserer Datenbank auffällt, ist die Redundanz von Daten. Die Studentin Adara Love hat zwei verschiedene Sprachkurse besucht (Französisch und Chinesisch). Aus diesem Grund haben wir Redundanz in vier Spalten, nämlich Matrikelnummer, Name, Immatrikulationsdatum und E-Mail.
+                            Wenn Adara Love 30 verschiedene Sprachkurse besucht hätte, wären diese Informationen 30 Mal wiederholt worden.
+                        </p>
+
+                        <p>
+                            Die Studenten Kevin Estrada und Liman Müller haben beide einen Deutschkurs besucht und wir stellen fest, dass sich die Informationen zu diesen Kursen wiederholen.
+                        </p>
+
+                        <h2>Probleme, die auftreten können, wenn eine Datenbank nicht normalisiert ist.</h2>
+                         <h3>Probleme beim Einfügen</h3>
+
+                        <p>
+                            Wir gehen davon aus, dass ein neuer Student einen Sprachkurs besucht hat und Ihre Aufgabe ist es, die Daten dieses Studenten in die Tabelle einzufügen, die wir oben gesehen haben. Sie können das folgende Formular ausfüllen und auf Senden klicken, um die Daten des neuen Studenten in der Datenbanktabelle zu speichern.
+                        </p>
+
+                        <div class="container">
+                            <form action=" " >
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="matrikelNr">Matrikelnummer</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="matrikelNr" name="matrikelNr" value="2242" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="sname">Studentenname</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="sname" name="sname" value="Youmbi Franck">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="idatum">Immatrikulationsdatum</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="idatum" name="idatum" value="Jan 17, 2020">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="email">E-Mail</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="email" name="email" value="junioryvan5@gmail.com">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="kursNr">KursNr.</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="kursNr" name="kursNr" value="859">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="kurs">Kurs</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="kurs" name="kurs" value="Italienisch">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="mDozent">Matrikel des Dozenten</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="mDozent" name="mDozent" value="6392">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="nDozent">Name des Dozenten</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="nDozent" name="nDozent" value="Markus Scholz">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="adatum">Anmeldedatum</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="adatum" name="adatum" value="Jan 19, 2021">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="betrag">Betrag</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="betrag" name="betrag" value="50.99€">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="note">Note</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="note" name="note" value="1">
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <br>
+                            <div class="row " >
+                                <input type="submit" id="submit" value="Senden" class="submit">
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="modal">
+                            <div class="modalContent">
+                                <span class="close">×</span>
+                                <p>Folgender SQL-Befehl wird ausgeführt, wollen Sie wirklich diesen Befehl ausführen ?</p>
+                                <code id="code1">
+                                    INSERT INTO tbl_sprachkurs ( MatrikelNr, Studentenname, email, KursNr, kurs, DozentMatrikel, anmeldedatum, betrag, Note ) VALUES
+                                </code>
+
+                                <br> <br>
+                                <button class="del" >Ausführen</button>
+                                <button class="cancel" >Abbrechen</button>
+                            </div>
+                        </div>
+
+                        <table id="customers2" class="open">
+                            <tr>
+                                <th class="open">Matrikelnummer</th>
+                                <th>Studentenname</th>
+                                <th>Imatrikulationsdatum</th>
+                                <th>email</th>
+                                <th>KursNr</th>
+                                <th>Kurs</th>
+                                <th>Matrikel Dozent</th>
+                                <th>Name Dozent</th>
+                                <th>Anmeldedatum</th>
+                                <th>Betrag</th>
+                                <th>Note </th>
+                            </tr>
+
+                            <tr>
+                                <td>7073</td>
+                                <td>Adara Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>891</td>
+                                <td>Chinesisch</td>
+                                <td>5661</td>
+                                <td> Addam Will</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="brandon">2242</td>
+                                <td>Brandon Po</td>
+                                <td>Jun 29, 2020</td>
+                                <td>sed.malesuada.augue@yahoo.org</td>
+                                <td>580</td>
+                                <td>Englisch</td>
+                                <td>4627</td>
+                                <td> Kamir Sarr</td>
+                                <td>Feb 11, 2021</td>
+                                <td>59.99€</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7073</td>
+                                <td>Adara Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>313</td>
+                                <td>Französisch</td>
+                                <td>7938</td>
+                                <td>Dadi Mann</td>
+                                <td>Jun 19, 2021</td>
+                                <td>49.40€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8137</td>
+                                <td>Kevin Estrada</td>
+                                <td>Dec 30, 2020</td>
+                                <td>nullam.enim.sed@outlook.org</td>
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td>Max Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1202</td>
+                                <td>Yardley Carrillo</td>
+                                <td>May 1, 2020</td>
+                                <td>risus.quis.diam@hotmail.edu</td>
+                                <td>763</td>
+                                <td>Fefe</td>
+                                <td>5661</td>
+                                <td>ElMouhamadoukaleb Maier</td>
+                                <td>Jun 11, 2021</td>
+                                <td>60.28€</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>8738</td>
+                                <td>Liman Müller</td>
+                                <td>Dec 30, 2020</td>
+                                <td>liman@outlook.org</td>
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td>Max Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </section>
+                <br> <br> <br>
+                <section class="section">
+                    <div>Section 3 content</div>
+                </section>
+
+                <section class="section">
+                    <div>Section 4 content</div>
+                </section>
+
+            </main>
+
+        </div>
+
+<footer id="mainFooter">
+<p>&copy; Copyright Youmbi Franck - 2022</p>
+</footer>
+</body>
+</html>
