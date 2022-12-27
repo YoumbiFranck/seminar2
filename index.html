@@ -23,7 +23,7 @@
 </header><!--Ici se termine le #mainHeader-->
 
         <div id="mainContent">
-            <div id="inhalt" class="aside">
+        <!--     <div id="inhalt" class="aside">
                 <p>Inhaltsverzeichnis</p>
                 <ul class= "navigation">
                      <li class="selected">Was ist die Normalisierung ?</li>
@@ -31,7 +31,7 @@
                      <li> Was sind die Vorteile der Normalisierung ?</li>
                      <li> Was sind die Prinzipien der Normalisierung ? </li>
                 </ul>
-            </div>
+            </div> -->
             <main class="test" id="main">
                 <h1> Normalisierung von Datenbanken </h1>
                     <div>
@@ -58,11 +58,12 @@
                             In dieser Tabelle werden also alle Studierende repräsentiert, die sich an dieser Universität immatrikuliert und einen Sprachkurs absolviert haben.
                         </p>
 
+                        
                         <p>
                             Wir stellen fest, dass diese Tabelle einige Anomalien aufweist.
                             Was ist die erste Anomalie, die Ihnen auffällt?
                         </p>
-
+                    
                         <button id="show_anomaly" class="button1">Anomalie Anzeigen</button>
                         
                         <table id="customers">
@@ -161,17 +162,22 @@
                             </tr>
                         </table>
                         <span>Auszug aus einer nicht normalisierten Datenbanktabelle.</span>
-                        <p>
-                            Das Erste, was uns in unserer Datenbank auffällt, ist die Redundanz von Daten. Die Studentin Adara Love hat zwei verschiedene Sprachkurse besucht (Französisch und Chinesisch). Aus diesem Grund haben wir Redundanz in vier Spalten, nämlich Matrikelnummer, Name, Immatrikulationsdatum und E-Mail.
-                            Wenn Adara Love 30 verschiedene Sprachkurse besucht hätte, wären diese Informationen 30 Mal wiederholt worden.
-                        </p>
+                    
+                        <div id="blocktext_1">
+                            <p>
+                                Das Erste, was uns in unserer Datenbank auffällt, ist die Redundanz von Daten. Die Studentin Adara Love hat zwei verschiedene Sprachkurse besucht (Französisch und Chinesisch). Aus diesem Grund haben wir Redundanz in vier Spalten, nämlich Matrikelnummer, Name, Immatrikulationsdatum und E-Mail.
+                                Wenn Adara Love 30 verschiedene Sprachkurse besucht hätte, wären diese Informationen 30 Mal wiederholt worden.
+                            </p>
 
-                        <p>
-                            Die Studenten Kevin Estrada und Liman Müller haben beide einen Deutschkurs besucht und wir stellen fest, dass sich die Informationen zu diesen Kursen wiederholen.
-                        </p>
+                            <p>
+                                Die Studenten Kevin Estrada und Liman Müller haben beide einen Deutschkurs besucht und wir stellen fest, dass sich die Informationen zu diesen Kursen wiederholen.
+                            </p>
+                        </div>
+                       
+                        <!--************************* Einfüge Anomalie **************************************-->
 
                         <h2>Probleme, die auftreten können, wenn eine Datenbank nicht normalisiert ist.</h2>
-                         <h3>Probleme beim Einfügen</h3>
+                         <h3>Einfügeanomalie</h3>
 
                         <p>
                             Wir gehen davon aus, dass ein neuer Student einen Sprachkurs besucht hat und Ihre Aufgabe ist es, die Daten dieses Studenten in die Tabelle einzufügen, die wir oben gesehen haben. Sie können das folgende Formular ausfüllen und auf Senden klicken, um die Daten des neuen Studenten in der Datenbanktabelle zu speichern.
@@ -185,7 +191,7 @@
                                         <label for="matrikelNr">Matrikelnummer</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="matrikelNr" name="matrikelNr" value="2242" readonly>
+                                        <input style="cursor: not-allowed" type="text" id="matrikelNr" name="matrikelNr" value="2242" readonly >
                                     </div>
                                 </div>
 
@@ -203,7 +209,7 @@
                                         <label for="idatum">Immatrikulationsdatum</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="idatum" name="idatum" value="Jan 17, 2020">
+                                        <input type="text" id="idatum" name="idatum" value="Jan 17, 2020" >
                                     </div>
                                 </div>
 
@@ -212,7 +218,7 @@
                                         <label for="email">E-Mail</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="email" name="email" value="junioryvan5@gmail.com">
+                                        <input type="text" id="email" name="email" value="junioryvan5@gmail.com" >
                                     </div>
                                 </div>
 
@@ -221,7 +227,7 @@
                                         <label for="kursNr">KursNr.</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="kursNr" name="kursNr" value="859">
+                                        <input type="text" id="kursNr" name="kursNr" value="859" >
                                     </div>
                                 </div>
 
@@ -230,7 +236,7 @@
                                         <label for="kurs">Kurs</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="kurs" name="kurs" value="Italienisch">
+                                        <input type="text" id="kurs" name="kurs" value="Italienisch" >
                                     </div>
                                 </div>
 
@@ -239,7 +245,7 @@
                                         <label for="mDozent">Matrikel des Dozenten</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="mDozent" name="mDozent" value="6392">
+                                        <input type="text" id="mDozent" name="mDozent" value="6392" >
                                     </div>
                                 </div>
 
@@ -248,7 +254,7 @@
                                         <label for="nDozent">Name des Dozenten</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="nDozent" name="nDozent" value="Markus Scholz">
+                                        <input type="text" id="nDozent" name="nDozent" value="Markus Scholz" >
                                     </div>
                                 </div>
 
@@ -257,7 +263,7 @@
                                         <label for="adatum">Anmeldedatum</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="adatum" name="adatum" value="Jan 19, 2021">
+                                        <input type="text" id="adatum" name="adatum" value="Jan 19, 2021" >
                                     </div>
                                 </div>
 
@@ -266,7 +272,7 @@
                                         <label for="betrag">Betrag</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="betrag" name="betrag" value="50.99€">
+                                        <input type="text" id="betrag" name="betrag" value="50.99€" >
                                     </div>
                                 </div>
 
@@ -275,33 +281,34 @@
                                         <label for="note">Note</label>
                                     </div>
                                     <div class="col-75">
-                                        <input type="text" id="note" name="note" value="1">
+                                        <input type="text" id="note" name="note" value="1" >
                                     </div>
                                 </div>
 
                             </form>
 
                             <br>
-                            <div class="row " >
-                                <input type="submit" id="submit" value="Senden" class="submit">
+                            <div class="row" id="submit_block1">
+                                <input type="submit" id="submit" value="Senden" class="submit" >
                             </div>
                         </div>
                         <br>
 
-                        <div class="modal">
-                            <div class="modalContent">
-                                <span class="close">×</span>
-                                <p>Folgender SQL-Befehl wird ausgeführt, wollen Sie wirklich diesen Befehl ausführen ?</p>
-                                <code id="code1">
-                                    INSERT INTO tbl_sprachkurs ( MatrikelNr, Studentenname, email, KursNr, kurs, DozentMatrikel, anmeldedatum, betrag, Note ) VALUES
+                        <div class="modal modal-div">
+                            <div class="modalContent modalContent-div">
+                                <span class="close close-div">×</span>
+                                <p>Folgender SQL-Befehl wird ausgeführt</p>
+                                <code>
+                                    INSERT INTO tbl_sprachkurs ( MatrikelNr, Studentenname, email, KursNr, kurs, DozentMatrikel, anmeldedatum, betrag, Note ) VALUES <span id="code1"></span>
                                 </code>
 
                                 <br> <br>
-                                <button class="del" >Ausführen</button>
-                                <button class="cancel" >Abbrechen</button>
+                                <button class="del del-div" >Ausführen</button>
+                                <button class="cancel cancel-div" >Abbrechen</button>
                             </div>
                         </div>
 
+                        <p style="color: red;">Vielleicht soll ich noch ein Delete Button Einfügen</p>
                         <table id="customers2" class="open">
                             <tr>
                                 <th class="open">Matrikelnummer</th>
@@ -398,6 +405,196 @@
                             </tr>
                         </table>
 
+                       
+
+                        <div id="blocktext_2">
+                            <p>
+                                Beim Einfügen der Daten in die Datenbanktabelle haben Sie sich bei der Matrikelnummer des Studenten geirrt, und die von Ihnen eingegebene Matrikelnummer gehört bereits einem Studenten.
+                                Wir haben also zwei verschiedene Studierende, die durch die gleiche Matrikelnummer spezifiziert sind und dieser Fehler wird die Pflege der Datenbank erschweren. So kann eine nicht normalisierte Datenbanktabelle zu Problemen beim Einfügen von Daten führen.
+
+                            </p>
+                        </div>
+
+                        <!--************************* Änderungsanomalie   **************************************-->
+
+                        <div>
+                            <h2>Änderungsanomalie</h2>
+
+                            <p>
+                                In diesem Abschnitt erklären wir Ihnen, wie die Nicht-Normalisierung einer Datenbanktabelle zu Problemen bei der Aktualisierung führen kann 
+                            </p>
+
+                            <p>
+                                Die email der Studierenden wurde in mehreren Datensätzen gespeichert. Das nennt man Redundanz: Informationen wurden häufiger vermerkt als nötig. Es hätte gereicht, die E-Mail einmal zu speichern.
+                                    Wenn zum Beispiel Adara ihre E-Mail ändert, so muss diese in allen Datensätzen verändert werden, in denen Adara einen Sprachkurs besucht hat.
+                            </p>
+                            <p>
+                                probieren Sie selbst die email von Adara zu ändern.
+                            </p>
+
+                            <div class="container">
+                                <form action="">
+    
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="email-update">e-mail</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input  type="email" id="email-update" name="email-update" required>
+                                        </div>
+                                    </div>
+                                    
+
+                                </form>
+                            </div>
+                            
+                        
+    
+                            <button id="updateemail" class="button1 updateemail">Adaras e-mail aktualisieren</button>
+
+                            <div class="modal2 modal-div">
+                                <div class="modalContent2 modalContent-div">
+                                    <span class="close2 close-div">×</span>
+                                    <p>Folgender SQL-Befehl wird ausgeführt</p>
+                                    <code id="tag_code">
+                                        UPDATE tbl_sprachkurs SET email=<span id="code2"></span> <br>
+                                        WHERE Matrikelnummer=7073;    
+                                    </code>
+    
+                                    <br> <br>
+                                    <button class="update2 del-div" >Aktualisieren</button>
+                                    <button class="cancel2 cancel-div" >Abbrechen</button>
+                                </div>
+                            </div>
+                            
+                            <table class="customers" id="update">
+                                <tr>
+                                    <th>Matrikelnummer</th>
+                                    <th>Studentenname</th>
+                                    <th>Imatrikulationsdatum</th>
+                                    <th>email</th>
+                                    <th>KursNr</th>
+                                    <th>Kurs</th>
+                                    <th>Matrikel Dozent</th>
+                                    <th>Name Dozent</th>
+                                    <th>Anmeldedatum</th>
+                                    <th>Betrag</th>
+                                    <th>Note </th>
+                                </tr>
+    
+                                <tr >
+                                    <td>7073</td>
+                                    <td>Adara Love</td>
+                                    <td>Jan 23, 2020</td>
+                                    <td>viverra@google.edu</td>
+                                    <td>891</td>
+                                    <td>Chinesisch</td>
+                                    <td>5661</td>
+                                    <td> Addam Will</td>
+                                    <td>Jan 18, 2021</td>
+                                    <td>43.95€</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>2242</td>
+                                    <td>Brandon Leblanc</td>
+                                    <td>Jun 29, 2020</td>
+                                    <td>sed.malesuada.augue@yahoo.org</td>
+                                    <td>580</td>
+                                    <td>Englisch</td>
+                                    <td>4627</td>
+                                    <td> Kamir Sarr</td>
+                                    <td>Feb 11, 2021</td>
+                                    <td>59.99€</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>7073</td>
+                                    <td>Adara Love</td>
+                                    <td>Jan 23, 2020</td>
+                                    <td>viverra@google.edu</td>
+                                    <td>313</td>
+                                    <td>Französisch</td>
+                                    <td>7938</td>
+                                    <td>Dadi Mann</td>
+                                    <td>Jun 19, 2021</td>
+                                    <td>49.40€</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>8137</td>
+                                    <td>Kevin Estrada</td>
+                                    <td>Dec 30, 2020</td>
+                                    <td>nullam.enim.sed@outlook.org</td>
+                                    <td>550</td>
+                                    <td>Deutsch</td>
+                                    <td>5661</td>
+                                    <td>Max Neuer</td>
+                                    <td>Feb 4, 2021</td>
+                                    <td>53.88€</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1202</td>
+                                    <td>Yardley Carrillo</td>
+                                    <td>May 1, 2020</td>
+                                    <td>risus.quis.diam@hotmail.edu</td>
+                                    <td>763</td>
+                                    <td>Fefe</td>
+                                    <td>5661</td>
+                                    <td>ElMouhamadoukaleb Maier</td>
+                                    <td>Jun 11, 2021</td>
+                                    <td>60.28€</td>
+                                    <td>3</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>8738</td>
+                                    <td>Liman Müller</td>
+                                    <td>Dec 30, 2020</td>
+                                    <td>liman@outlook.org</td>
+                                    <td>550</td>
+                                    <td>Deutsch</td>
+                                    <td>5661</td>
+                                    <td>Max Neuer</td>
+                                    <td>Feb 4, 2021</td>
+                                    <td>53.88€</td>
+                                    <td>2</td>
+                                </tr>
+
+                                <tr >
+                                    <td>7074</td>
+                                    <td>Adara Love</td>
+                                    <td>Jan 23, 2020</td>
+                                    <td>viverra@google.edu</td>
+                                    <td>891</td>
+                                    <td>Spanisch</td>
+                                    <td>5661</td>
+                                    <td> Addam Will</td>
+                                    <td>Jan 18, 2021</td>
+                                    <td>43.95€</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        
+                            <div id="blocktext_3">
+                               <p>
+                                    Ein Datensatz wurde nicht aktualisiert, es befindet sich jetzt zwei unterschiedlichen e-mails von Adara und es kann unmöglich sein, herauszufinden, welche die aktuelle e-mail ist. Es liegt eine Änderungsanomalie vor.
+                               </p>
+                            </div>
+              
+                        </div>
+                                <!--************************* Löschanomalie **************************************-->
+                                <h2>Löschanomalie</h2>
+
+                                <p>
+                                    in diesem Abschnitt werden wir  Ihnen erklären, wie das Lös
+                                </p>
+
+
+                        <div>
+
+                        </div>
 
                     </div>
                 </section>
