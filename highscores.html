@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seminar 2</title>
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="/js/menu.js" defer></script>
+
+</head>
+<body>
+<header id="s2_mainHeader">
+  <a href="index.html" title="gehen Sie zur Startseite"> <img src="/image/layout/THM_Logo.png" alt="Logo THM" id="logoTHM" /></a>
+  <h1>Wirtschaftsinformatik-Seminar II</h1>
+  <nav id="s2_mainNav">
+    <ul>
+      <li><a href="quiz_index.html" title="machen Sie den Quiz">QUIZ</a></li>
+      <li><a href="#" title="Funktionale Abhängigkeiten und Schlüsselkandidaten">Info</a></li>
+    </ul>
+  </nav>
+  <button id="menuToggle"><img src="/image/layout/hamburger.svg" alt="Menu öffen 7 Schließen" /></button>
+</header><!--Hier endet #mainHeader-->
+
+<div class="quiz_container">
+  <div id="highScores" class="quiz_flex-center quiz_flex-column">
+    <h1 id="finalScore">Ergebnisse</h1>
+    <ul id="highScoresList"></ul>
+    <a class="button1" href="quiz_index.html">Zum Quiz</a>
+  </div>
+</div>
+
+
+
+<script src="/js/highscores.js"></script>
+<footer id="mainFooter">
+  <p>&copy; Copyright Youmbi Franck - 2022</p>
+</footer>
+</body>
+</html>

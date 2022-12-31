@@ -136,6 +136,7 @@ input[type=submit]:hover {
     text-align: left;
     background-color: #04AA6D;
     color: white;
+    
 }
 
 /**........... Tabelle3 ................... **/
@@ -163,7 +164,7 @@ input[type=submit]:hover {
 }
 
 /**........... Button  ................... **/
-.button1 {
+.button1, .button_quiz {
     background-color: var(--green2);
     border: none;
     color: white;
@@ -175,6 +176,7 @@ input[type=submit]:hover {
     margin: 4px 2px;
     cursor: pointer;
 }
+
 
 
 /**........... CSS Tabelle  ................... **/
@@ -277,6 +279,14 @@ input[type=submit]:hover {
 .del-div:hover {
     background-color: var(--green);
 }
+
+.del-div2 {
+    background-color: var(--red);
+}
+.del-div2:hover {
+    background-color: var(--red);
+}
+
 .cancel-div:hover {
     background-color: rgb(167, 167, 167);
 }
@@ -481,5 +491,139 @@ input[type=submit]:hover {
 }
 
 
+/**...........++++++++++++++++++++++++++ Quiz Startseite  Allgemein ++++++++++++++++++++++++++++++++++++++++................... **/
+.quiz_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.quiz_container > * {
+    width: 100%;
+}
+
+.quiz_flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz_flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz_justify-center {
+    justify-content: center;
+}
+
+.quiz_text-center {
+    text-align: center;
+}
+
+.quiz_hidden {
+    display: none;
+}
 
 
+.button_quiz {
+    width: 120px;
+}
+
+/**........... Choise  ................... **/
+
+.quiz_choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border: 0.1rem solid var(--green);
+    background-color: white;
+}
+
+.quiz_choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 var(--green);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.quiz_choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: var(--green);
+    color: white;
+}
+
+.quiz_choice-text {
+    padding: 1.5rem;
+}
+.quiz_choice-prefix{
+    text-after-overflow: center;
+    width: 80px;
+    height: 80px;
+}
+
+.correct {
+    background-color: #28a745;
+}
+
+.incorrect {
+    background-color: #dc3545;
+}
+
+/* HUD */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+/* ProgressBar */
+#progressBar {
+    width: 20rem;
+    height: 20px;
+    border: 0.3rem solid var(--green);
+    margin-top: 1.5rem;
+}
+
+#progressBarFull {
+    height: 10px;
+    background-color: var(--green);
+    width: 0%;
+}
+
+
+/* highScores */
+#highScoresList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}
+
+
+
+@media screen and (max-width: 768px){
+    #quiz_question{
+        margin-top: 100px;
+    }
+}

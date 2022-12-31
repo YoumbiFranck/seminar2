@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seminar 2</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/menu.js" defer></script>
+
+</head>
+<body>
+<!--Hier satrt #mainHeader-->
+<header id="s2_mainHeader">
+    <a href="index.html" title="gehen Sie zur Startseite"> <img src="/image/layout/THM_Logo.png" alt="Logo THM" id="logoTHM" /></a>
+    <h1>Wirtschaftsinformatik-Seminar II</h1>
+    <nav id="s2_mainNav">
+        <ul>
+            <li><a href="quiz_index.html" title="machen Sie den Quiz">QUIZ</a></li>
+            <li><a href="#" title="#"></a></li>
+        </ul>
+    </nav>
+    <button id="menuToggle"><img src="/image/layout/hamburger.svg" alt="Menu öffen 7 Schließen" /></button>
+</header>
+<!--Hier endet #mainHeader-->
+
+<!-- Logic Start -->
+<div class="quiz_container">
+    <div id="end" class="quiz_justify-center quiz_flex-column">
+        <h1>Sie haben <span id="finalScore"></span> Punkte erreicht</h1>
+        <p>
+            geben Sie ihren Namen ein, um ihr Ergebnis zu speichern
+        </p>
+        <form>
+            <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Bitte geben Sie Ihren Namen ein"
+            />
+            <button
+                    type="submit"
+                    class="button1"
+                    id="saveScoreBtn"
+                    onclick="saveHighScore(event)"
+                    disabled
+            >
+                Speichern
+            </button>
+        </form>
+        <a class="button1" href="/quiz_play.html">Nochmal Spielen</a>
+        <a class="button1" href="/quiz_index.html">Zur Startseite</a>
+    </div>
+</div>
+<script src="/js/quiz_z_end.js"></script>
+<!-- Logic End-->
+
+<footer id="mainFooter">
+    <p>&copy; Copyright Youmbi Franck - 2022</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Die erste Normalform ist gegeben, wenn alle Informationen in der Tabelle",
+    "choice1": "Atomar vorliegen",
+    "choice2": "Richtige Beziehungen besitzen",
+    "choice3": "Richtige Kardinalitäten besitzen",
+    "choice4": "Redundant sind",
+    "answer": 1
+  },
+  {
+    "question": "Welche Eigenschaft muss eine Datenbank besitzen, um nach der 3. Normalform zu sein ?",
+    "choice1": "Keine 2 Felder haben den gleichen Inhalt",
+    "choice2": "Es liegen nur atomar Atomar Attribute vor",
+    "choice3": "Es müssen pro Relation mindestens 3 Schlüssel vorliegen",
+    "choice4": "jedes Attribut ist vollständig von einem Primärschlüssel abhängig",
+    "answer": 4
+  },
+  {
+    "question": "Was sind Kandidatenschlüssel ?",
+    "choice1": "Fehler in einer datenbank",
+    "choice2": "Z.B Primärschlüssel",
+    "choice3": "Ein anderer Name für Nichtschlüsselattribute",
+    "choice4": "Schlüssel zum Schutz der Datenbank",
+    "answer": 2
+  },
+  {
+    "question": "Welche Normalform verkörpert in der Praxis ein erweitertes ER-Modell ?",
+    "choice1": "1. Normalform",
+    "choice2": "2. Normalform",
+    "choice3": "3. Normalform",
+    "choice4": "0. Normalform",
+    "answer": 3
+  },
+  {
+    "question": "Eine Relation ist in Boyce-Codd Normalform, wenn",
+    "choice1": "Jedes nicht primär-Attribut von allen ganzen Schlüsseln abhängig ist",
+    "choice2": "wenn jeder Determinant ein Schlüsselkandidat ist",
+    "choice3": "Richtige Kardinalitäten besitzen",
+    "choice4": "kein Nichtschlüsselattribut von einem Schlüsselattribut transitiv abhängig ist",
+    "answer": 2
+  },
+  {
+    "question": "Was sind Anomalien ?",
+    "choice1": "Fehler in der Datenbank durch Softwareprobleme",
+    "choice2": "Fehler in der Datenbank durch verletzung der Regel",
+    "choice3": "Zwei gleiche Informationen in einer Tabelle",
+    "choice4": "zu viel Informationen in der Datenbank",
+    "answer": 2
+  },
+  {
+    "question": "Was sind Redundanzen ?",
+    "choice1": "Fehler in der Datenbank durch Softwareprobleme",
+    "choice2": "Fehler in der Datenbank durch verletzung der Regel",
+    "choice3": "Zwei gleiche Informationen in einer Tabelle",
+    "choice4": "zu viel Informationen in der Datenbank",
+    "answer": 3
+  },
+  {
+    "question": "Was wird bei der ersten Normalform beachtet ?",
+    "choice1": "Redundanzen und Atome",
+    "choice2": "Transitive Abhängigkeit und Redundanzen",
+    "choice3": "Funktionale Abhängigkeit, Redundanzen und atomare Attribute",
+    "choice4": "Redundanzen und atomare Attribute",
+    "answer": 4
+  },
+  {
+    "question": "Die zweite Normalform ist gegeben, wenn",
+    "choice1": "Jedes nicht primär-Attribut von allen ganzen Schlüsseln abhängig ist",
+    "choice2": "Richtige Beziehungen besitzen",
+    "choice3": "Richtige Kardinalitäten besitzen",
+    "choice4": "kein Nichtschlüsselattribut von einem Schlüsselattribut transitiv abhängig ist",
+    "answer": 1
+  },
+  {
+    "question": "Was sind Nichtschlüsselattribute ?",
+    "choice1": "Organisierte Daten, nach denen in einer Datenbank  gesucht werden kann",
+    "choice2": "sind unabhängig von irgendwelche Schlüssel",
+    "choice3": "sind 2 Primärschlüssel",
+    "choice4": "sind abhängig von den Schlüsselkandidaten",
+    "answer": 1
+  }
+]

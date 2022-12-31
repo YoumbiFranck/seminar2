@@ -6,7 +6,6 @@
     <title>Seminar 2</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/jquery-3.4.1.min.js"></script>
     <script src="/js/menu.js" defer></script>
 </head>
 <body>
@@ -15,12 +14,12 @@
     <h1>Wirtschaftsinformatik-Seminar II</h1>
     <nav id="s2_mainNav">
         <ul>
-                <li><a href="index.html" title="Hier werden Sie erfahren, was eine relationale Datenbank ist">Normalformen</a></li>
+                    <li><a href="quiz_index.html" title="Hier werden Sie erfahren, was eine relationale Datenbank ist">QUIZ</a></li>
             <li><a href="#" title="Funktionale Abhängigkeiten und Schlüsselkandidaten">Info</a></li>
         </ul>
     </nav>
     <button id="menuToggle"><img src="/image/layout/hamburger.svg" alt="Menu öffen 7 Schließen" /></button>
-</header><!--Ici se termine le #mainHeader-->
+</header><!--Hier endet #mainHeader-->
 
         <div id="mainContent">
         <!--     <div id="inhalt" class="aside">
@@ -308,7 +307,7 @@
                             </div>
                         </div>
 
-                        <p style="color: red;">Vielleicht soll ich noch ein Delete Button Einfügen</p>
+                        
                         <table id="customers2" class="open">
                             <tr>
                                 <th class="open">Matrikelnummer</th>
@@ -579,7 +578,7 @@
                         
                             <div id="blocktext_3">
                                <p>
-                                    Ein Datensatz wurde nicht aktualisiert, es befindet sich jetzt zwei unterschiedlichen e-mails von Adara und es kann unmöglich sein, herauszufinden, welche die aktuelle e-mail ist. Es liegt eine Änderungsanomalie vor.
+                                    Ein Datensatz wurde nicht aktualisiert, es befindet sich jetzt zwei unterschiedlichen e-mails von Adara und es kann unmöglich werden, herauszufinden, welche die aktuelle e-mail ist. Es liegt eine Änderungsanomalie vor.
                                </p>
                             </div>
               
@@ -591,6 +590,138 @@
                                     in diesem Abschnitt werden wir  Ihnen erklären, wie das Lös
                                 </p>
 
+                                <button id="deleteinfos" class="button1 deleteinfos">Carrillos Daten löschen</button>
+                                
+                                <div class="modal3 modal-div">
+                                    <div class="modalContent3 modalContent-div">
+                                        <span class="close3 close-div">×</span>
+                                        <p>Folgender SQL-Befehl wird ausgeführt</p>
+                                        <code>
+                                            DELETE FROM tbl_sprachkurs WHERE Studentenname='Yardley Carrillo'; 
+                                        </code>
+        
+                                        <br> <br>
+                                        <button class="delete3 del-div2" >Löschen</button>
+                                        <button class="cancel3 cancel-div" >Abbrechen</button>
+                                    </div>
+                                </div>
+                                
+                                <table class="customers" >
+                                    <tr>
+                                        <th>Matrikelnummer</th>
+                                        <th>Studentenname</th>
+                                        <th>Imatrikulationsdatum</th>
+                                        <th>email</th>
+                                        <th>KursNr</th>
+                                        <th>Kurs</th>
+                                        <th>Matrikel Dozent</th>
+                                        <th>Name Dozent</th>
+                                        <th>Anmeldedatum</th>
+                                        <th>Betrag</th>
+                                        <th>Note </th>
+                                    </tr>
+        
+                                    <tr >
+                                        <td>7073</td>
+                                        <td>Adara Love</td>
+                                        <td>Jan 23, 2020</td>
+                                        <td>viverra@google.edu</td>
+                                        <td>891</td>
+                                        <td>Chinesisch</td>
+                                        <td>5661</td>
+                                        <td> Addam Will</td>
+                                        <td>Jan 18, 2021</td>
+                                        <td>43.95€</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2242</td>
+                                        <td>Brandon Leblanc</td>
+                                        <td>Jun 29, 2020</td>
+                                        <td>sed.malesuada.augue@yahoo.org</td>
+                                        <td>580</td>
+                                        <td>Englisch</td>
+                                        <td>4627</td>
+                                        <td> Kamir Sarr</td>
+                                        <td>Feb 11, 2021</td>
+                                        <td>59.99€</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7073</td>
+                                        <td>Adara Love</td>
+                                        <td>Jan 23, 2020</td>
+                                        <td>viverra@google.edu</td>
+                                        <td>313</td>
+                                        <td>Französisch</td>
+                                        <td>7938</td>
+                                        <td>Dadi Mann</td>
+                                        <td>Jun 19, 2021</td>
+                                        <td>49.40€</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8137</td>
+                                        <td>Kevin Estrada</td>
+                                        <td>Dec 30, 2020</td>
+                                        <td>nullam.enim.sed@outlook.org</td>
+                                        <td>550</td>
+                                        <td>Deutsch</td>
+                                        <td>5661</td>
+                                        <td>Max Neuer</td>
+                                        <td>Feb 4, 2021</td>
+                                        <td>53.88€</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr id="c_datenlöschen">
+                                        <td>1202</td>
+                                        <td>Yardley Carrillo</td>
+                                        <td>May 1, 2020</td>
+                                        <td>risus.quis.diam@hotmail.edu</td>
+                                        <td>763</td>
+                                        <td>Fefe</td>
+                                        <td>5661</td>
+                                        <td>El Maier</td>
+                                        <td>Jun 11, 2021</td>
+                                        <td>60.28€</td>
+                                        <td>3</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>8738</td>
+                                        <td>Liman Müller</td>
+                                        <td>Dec 30, 2020</td>
+                                        <td>liman@outlook.org</td>
+                                        <td>550</td>
+                                        <td>Deutsch</td>
+                                        <td>5661</td>
+                                        <td>Max Neuer</td>
+                                        <td>Feb 4, 2021</td>
+                                        <td>53.88€</td>
+                                        <td>2</td>
+                                    </tr>
+    
+                                    <tr >
+                                        <td>7074</td>
+                                        <td>Adara Love</td>
+                                        <td>Jan 23, 2020</td>
+                                        <td>viverra@google.edu</td>
+                                        <td>891</td>
+                                        <td>Spanisch</td>
+                                        <td>5661</td>
+                                        <td> Addam Will</td>
+                                        <td>Jan 18, 2021</td>
+                                        <td>43.95€</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            
+                                <div id="blocktext_4">
+                                   <p>
+                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum architecto perspiciatis facere quasi unde. Voluptates soluta eaque reiciendis animi a laudantium. Rem repellat, amet recusandae consectetur officia itaque vero corrupti.
+                                   </p>
+                                </div>
+
 
                         <div>
 
@@ -598,13 +729,501 @@
 
                     </div>
                 </section>
-                <br> <br> <br>
+<!--************************************************ 1. Normalform ******************************************************************-->
                 <section class="section">
-                    <div>Section 3 content</div>
-                </section>
+                    <h2>Die erste Normalform</h2>
+                    <div>
+                        <button id="normalform1" class="button1 normalform1">Erste Normalform sehen</button>
+                        <table class="customers" id="hide_and_show" >
+                            <tr>
+                                <th>MatrikelNr</th>
+                                <th class="hide2">Studentenname</th>
+                                <th class="hide" id="hide">Nachname Student</th>
+                                <th class="hide">Vorname Student</th>
+                                <th>Imatrikulationsdatum</th>
+                                <th>email</th>
+                                <th>KursNr</th>
+                                <th>Kurs</th>
+                                <th>Matrikel Dozent</th>
+                                <th class="hide2">Name Dozent</th>
+                                <th class="hide">Vorname Dozent</th>
+                                <th class="hide">Nachname Dozent</th>
+                                <th>Anmeldedatum</th>
+                                <th>Betrag</th>
+                                <th>Note </th>
+                            </tr>
 
+                            <tr>
+                                <td>7073</td>
+                                <td class="hide2">Adara Love</td>
+                                <td class="hide">Adara</td>
+                                <td class="hide">Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>891</td>
+                                <td>Chinesisch</td>
+                                <td>5661</td>
+                                <td class="hide2"> Addam Will</td>
+                                <td class="hide">Addam</td>
+                                <td class="hide">Will</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2242</td>
+                                <td class="hide2">Brandon Leblanc</td>
+                                <td class="hide">Brandon</td>
+                                <td class="hide">Leblanc</td>
+                                <td>Jun 29, 2020</td>
+                                <td>augue@yahoo.org</td>
+                                <td>580</td>
+                                <td>Englisch</td>
+                                <td>4627</td>
+                                <td class="hide2"> Kamir Sarr</td>
+                                <td class="hide">Kamir</td>
+                                <td class="hide">Sarr</td>
+                                <td>Feb 11, 2021</td>
+                                <td>59.99€</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7073</td>
+                                <td class="hide2">Adara Love</td>
+                                <td class="hide">Adara</td>
+                                <td class="hide">Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>313</td>
+                                <td>Französisch</td>
+                                <td>7938</td>
+                                <td class="hide2">Dadi Mann</td>
+                                <td class="hide">Dadi</td>
+                                <td class="hide">Mann</td>
+                                <td>Jun 19, 2021</td>
+                                <td>49.40€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8137</td>
+                                <td class="hide2">Kevin Estrada</td>
+                                <td class="hide">Kevin</td>
+                                <td class="hide">Estrada</td>
+                                <td>Dec 30, 2020</td>
+                                <td>nullam.enim.sed@outlook.org</td>
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td class="hide2">Max Neuer</td>
+                                <td class="hide">Max</td>
+                                <td class="hide">Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1202</td>
+                                <td class="hide2">Yardley Carrillo</td>
+                                <td class="hide">Yardley</td>
+                                <td class="hide">Carrillo</td>
+                                <td>May 1, 2020</td>
+                                <td>risus.quis.diam@hotmail.edu</td>
+                                <td>763</td>
+                                <td>Fefe</td>
+                                <td>5661</td>
+                                <td class="hide2">El Maier</td>
+                                <td class="hide">El</td>
+                                <td class="hide">Maeir</td>
+                                <td>Jun 11, 2021</td>
+                                <td>60.28€</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>8738</td>
+                                <td class="hide2">Liman Müller</td>
+                                <td class="hide">Liman</td>
+                                <td class="hide">Mülller</td>
+                                <td>Dec 30, 2020</td>
+                                <td>liman@outlook.org</td>
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td class="hide2">Max Neuer</td>
+                                <td class="hide">Max</td>
+                                <td class="hide">Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr >
+                                <td>7074</td>
+                                <td class="hide2">Adara Love</td>
+                                <td class="hide">Adara</td>
+                                <td class="hide">Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>891</td>
+                                <td>Spanisch</td>
+                                <td>5661</td>
+                                <td class="hide2"> Addam Will</td>
+                                <td class="hide">Addam</td>
+                                <td class="hide">Will</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </section>
+<!--************************************************ 2. Normalform ******************************************************************-->
                 <section class="section">
-                    <div>Section 4 content</div>
+                    <h2>die zweite normalform</h2>
+                    <div>
+                        <button id="normalform2" class="button1 normalform2">Zweite Normalform sehen</button>
+                        <table class="customers tab1" id="tab1">
+                            <tr>
+                                <th>MatrikelNr</th>
+                                <th>Nachname Student</th>
+                                <th>Vorname Student</th>
+                                <th>Imatrikulationsdatum</th>
+                                <th>email</th>
+                                <th>KursNr</th>
+                                <th>Kurs</th>
+                                <th>Matrikel Dozent</th>
+                                <th>Vorname Dozent</th>
+                                <th>Nachname Dozent</th>
+                                <th>Anmeldedatum</th>
+                                <th>Betrag</th>
+                                <th>Note </th>
+                            </tr>
+
+                            <tr>
+                                <td>7073</td>
+                                <td>Adara</td>
+                                <td>Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>891</td>
+                                <td>Chinesisch</td>
+                                <td>5661</td>
+                                <td>Addam</td>
+                                <td>Will</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2242</td>
+                                <td>Brandon</td>
+                                <td>Leblanc</td>
+                                <td>Jun 29, 2020</td>
+                                <td>augue@yahoo.org</td>
+                                <td>580</td>
+                                <td>Englisch</td>
+                                <td>4627</td>
+                                <td>Kamir</td>
+                                <td>Sarr</td>
+                                <td>Feb 11, 2021</td>
+                                <td>59.99€</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7073</td>
+                                <td>Adara</td>
+                                <td>Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>313</td>
+                                <td>Französisch</td>
+                                <td>7938</td>
+                                <td>Dadi</td>
+                                <td>Mann</td>
+                                <td>Jun 19, 2021</td>
+                                <td>49.40€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8137</td>
+                                <td>Kevin</td>
+                                <td>Estrada</td>
+                                <td>Dec 30, 2020</td>
+                                <td>nullam.enim.sed@outlook.org</td>
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td>Max</td>
+                                <td>Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1202</td>
+                                <td>Yardley</td>
+                                <td>Carrillo</td>
+                                <td>May 1, 2020</td>
+                                <td>risus.quis.diam@hotmail.edu</td>
+                                <td>763</td>
+                                <td>Fefe</td>
+                                <td>5661</td>
+                                <td>El</td>
+                                <td>Maeir</td>
+                                <td>Jun 11, 2021</td>
+                                <td>60.28€</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>8738</td>
+                                <td>Liman</td>
+                                <td>Mülller</td>
+                                <td>Dec 30, 2020</td>
+                                <td>liman@outlook.org</td>
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td>Max</td>
+                                <td>Neuer</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr >
+                                <td>7074</td>
+                                <td>Adara</td>
+                                <td>Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                <td>891</td>
+                                <td>Spanisch</td>
+                                <td>5661</td>
+                                <td>Addam</td>
+                                <td>Will</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                    <!--++++++++++++++++++++++ Tab 2 +++++++++++++++++++++++-->
+                        <table class="customers tab" id="tab2">
+                            <tr>
+                                <th style="text-decoration: underline;">MatrikelNr</th>
+                                <th>Nachname Student</th>
+                                <th>Vorname Student</th>
+                                <th>Imatrikulationsdatum</th>
+                                <th>email</th>
+                            </tr>
+
+                            <tr>
+                                <td>7073</td>
+                                <td>Adara</td>
+                                <td>Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>2242</td>
+                                <td>Brandon</td>
+                                <td>Leblanc</td>
+                                <td>Jun 29, 2020</td>
+                                <td>augue@yahoo.org</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>7073</td>
+                                <td>Adara</td>
+                                <td>Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                             
+                            </tr>
+                            <tr>
+                                <td>8137</td>
+                                <td>Kevin</td>
+                                <td>Estrada</td>
+                                <td>Dec 30, 2020</td>
+                                <td>nullam.enim.sed@outlook.org</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>1202</td>
+                                <td>Yardley</td>
+                                <td>Carrillo</td>
+                                <td>May 1, 2020</td>
+                                <td>risus.quis.diam@hotmail.edu</td>
+                               
+                            </tr>
+
+                            <tr>
+                                <td>8738</td>
+                                <td>Liman</td>
+                                <td>Mülller</td>
+                                <td>Dec 30, 2020</td>
+                                <td>liman@outlook.org</td>
+                               
+                            </tr>
+
+                            <tr >
+                                <td>7074</td>
+                                <td>Adara</td>
+                                <td>Love</td>
+                                <td>Jan 23, 2020</td>
+                                <td>viverra@google.edu</td>
+                                
+                            </tr>
+                        </table>
+                        <br>
+                        <!--++++++++++++++++++++++ Tab 3 +++++++++++++++++++++++-->
+
+                        <table class="customers tab" id="tab3">
+                            <tr>
+                               
+                                <th style="text-decoration: underline;">KursNr</th>
+                                <th>Kurs</th>
+                                <th>Matrikel Dozent</th>
+                                <th>Vorname Dozent</th>
+                                <th>Nachname Dozent</th>
+                               
+                            </tr>
+
+                            <tr>
+                               
+                                <td>891</td>
+                                <td>Chinesisch</td>
+                                <td>5661</td>
+                                <td>Addam</td>
+                                <td>Will</td>
+                               
+                            </tr>
+                            <tr>
+                                
+                                <td>580</td>
+                                <td>Englisch</td>
+                                <td>4627</td>
+                                <td>Kamir</td>
+                                <td>Sarr</td>
+                               
+                            </tr>
+                            <tr>
+                               
+                                <td>313</td>
+                                <td>Französisch</td>
+                                <td>7938</td>
+                                <td>Dadi</td>
+                                <td>Mann</td>
+                               
+                            </tr>
+                            <tr>
+                               
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td>Max</td>
+                                <td>Neuer</td>
+                                
+                            </tr>
+                            <tr>
+                               
+                                <td>763</td>
+                                <td>Fefe</td>
+                                <td>5661</td>
+                                <td>El</td>
+                                <td>Maeir</td>
+                               
+                            </tr>
+
+                            <tr>
+                             
+                                <td>550</td>
+                                <td>Deutsch</td>
+                                <td>5661</td>
+                                <td>Max</td>
+                                <td>Neuer</td>
+                               
+                            </tr>
+
+                            <tr >
+                                
+                                <td>891</td>
+                                <td>Spanisch</td>
+                                <td>5661</td>
+                                <td>Addam</td>
+                                <td>Will</td>
+                              
+                            </tr>
+                        </table>
+
+                        <br>
+                        <!--++++++++++++++++++++++ Tab 4 +++++++++++++++++++++++-->
+
+                        <table class="customers tab" id="tab4" >
+                            <tr>
+                                <th style="text-decoration: underline;">MatrikelNr</th>
+                                <th style="text-decoration: underline;">KursNr</th>
+                                <th>Anmeldedatum</th>
+                                <th>Betrag</th>
+                                <th>Note </th>
+                            </tr>
+
+                            <tr>
+                                <td>7073</td>
+                                <td>891</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2242</td>
+                                <td>580</td>
+                                <td>Feb 11, 2021</td>
+                                <td>59.99€</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7073</td>
+                                <td>313</td>
+                                <td>Jun 19, 2021</td>
+                                <td>49.40€</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8137</td>
+                                <td>550</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1202</td>
+                                <td>763</td>
+                                <td>Jun 11, 2021</td>
+                                <td>60.28€</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>8738</td>
+                                <td>550</td>
+                                <td>Feb 4, 2021</td>
+                                <td>53.88€</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr >
+                                <td>7074</td>
+                                <td>891</td>
+                                <td>Jan 18, 2021</td>
+                                <td>43.95€</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+
+                    </div>
                 </section>
 
             </main>

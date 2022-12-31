@@ -1,0 +1,84 @@
+        <!DOCTYPE html>
+        <html lang="de">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Seminar 2</title>
+            <link rel="stylesheet" href="/css/normalize.css" />
+            <link rel="stylesheet" href="/css/style.css" />
+            <script src="/js/menu.js" defer></script>
+
+        </head>
+        <body>
+        <!--Hier startet #mainHeader-->
+        <header id="s2_mainHeader">
+            <a href="index.html" title="gehen Sie zur Startseite"> <img src="/image/layout/THM_Logo.png" alt="Logo THM" id="logoTHM" /></a>
+            <h1>Wirtschaftsinformatik-Seminar II</h1>
+            <nav id="s2_mainNav">
+                <ul>
+                    <li><a href="quiz_index.html" title="machen Sie den Quiz">QUIZ</a></li>
+                    <li><a href="#" title="Funktionale Abhängigkeiten und Schlüsselkandidaten"></a></li>
+                </ul>
+            </nav>
+            <button id="menuToggle"><img src="/image/layout/hamburger.svg" alt="Menu öffen 7 Schließen" /></button>
+        </header>
+        <!--Hier endet #mainHeader-->
+
+        <div class="quiz_container">
+            <div id="quiz_game" class="quiz_justify-center quiz_flex-column">
+
+                <!-- Anzahl der Fragen und Score Start-->
+                <div id="hud">
+                    <div id="hud-item1">
+                        <p class="hud-prefix">
+                            Fragen
+                        </p>
+
+                        <h1 class="hud-main-text" id="questionCounter"></h1>
+                        <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                        </div>
+
+                    </div>
+                    <div id="hud-item2">
+                        <p class="hud-prefix">
+                            Ergebnis
+                        </p>
+                        <h1 class="hud-main-text" id="score">
+                            0
+                        </h1>
+                    </div>
+                </div>
+                <!-- Ende Anzahl der Fragen und Score-->
+
+                <!-- Multiple choice Fragen Start-->
+                <h2 id="quiz_question"> </h2>
+                <div class="quiz_choice-container">
+                    <p class="quiz_choice-prefix">A</p>
+                    <p class="quiz_choice-text" data-number="1"> </p>
+                </div>
+                <div class="quiz_choice-container">
+                    <p class="quiz_choice-prefix">B</p>
+                    <p class="quiz_choice-text" data-number="2"> </p>
+                </div>
+                <div class="quiz_choice-container">
+                    <p class="quiz_choice-prefix">C</p>
+                    <p class="quiz_choice-text" data-number="3"> </p>
+                </div>
+                <div class="quiz_choice-container">
+                    <p class="quiz_choice-prefix">D</p>
+                    <p class="quiz_choice-text" data-number="4"> </p>
+                </div>
+                <!-- Multiple choice Fragen End-->
+
+            </div>
+        </div>
+
+        <!-- Script aufrufen-->
+        <script src="/js/quiz_play.js"></script>
+        <!-- footer-->
+        <footer id="mainFooter">
+            <p>&copy; Copyright Youmbi Franck - 2022</p>
+        </footer>
+        </body>
+        </html>

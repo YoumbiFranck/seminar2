@@ -300,7 +300,7 @@ function createNodeForUpdate (){
 const email = document.getElementById("email-update");
 email.addEventListener("input", (event) => {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("bitte geben die eine gültige email adresse ein");
+    email.setCustomValidity("bitte geben Sie eine gültige email adresse ein");
     email.reportValidity();
   } else {
     email.setCustomValidity("");
@@ -314,3 +314,122 @@ email.addEventListener("input", (event) => {
     
   }
 });
+
+
+/*............. Update email.............*/
+
+const blocktext4 = document.getElementById("blocktext_4");
+
+const modal3 = document.querySelector(".modal3");
+const btn3 = document.querySelector(".deleteinfos");
+const span3 = document.querySelector(".close3");
+const delete3 = document.querySelector(".delete3")
+const cancel3 = document.querySelector(".cancel3")
+
+const block_tex = document.getElementById("c_datenlöschen");
+
+block_tex.style.backgroundColor = '#DF9595';
+
+blocktext4.style.display = 'none';
+function showblocktext4() {
+    blocktext4.style.display = "block";
+
+}
+/** Open Modal **/
+//Open Modal
+btn3.addEventListener("click", () => {
+    modal3.style.display = "block";
+     
+});
+
+
+/** aktion rückgängig machen **/
+cancel3.addEventListener("click", ()=> {
+   hideModal3()
+   
+})
+
+/** Close Modal **/
+span3.addEventListener("click", () => {
+   hideModal3();
+  
+});
+
+
+
+/** Modal bestätigen  **/
+delete3.addEventListener("click", () => {
+    block_tex.remove();
+    btn3.disabled = true;
+    btn3.style.cursor = "not-allowed";
+    hideModal3();
+    showblocktext4();
+});
+
+function hideModal3() {
+    modal3.style.display = "none";
+}
+
+
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        hideModal3();
+    }
+};
+
+
+/*............. erste Normalform .............*/
+
+const nodesE = document.querySelectorAll(".hide");
+for (item of nodesE){
+    item.style.display = "none";
+}
+
+const normalform1 = document.getElementById("normalform1");
+const hideElements = document.querySelectorAll(".hide");
+const hideElements2 = document.querySelectorAll(".hide2");
+
+normalform1.addEventListener("click", () =>{
+    for (item of hideElements){
+        item.style.display= "revert";
+        item.style.backgroundColor = "green";
+    }
+    for (item of hideElements2){
+        item.style.display= "none";
+    }
+    normalform1.disabled = true;
+    normalform1.style.cursor = "not-allowed";
+});
+
+
+/*............. zweite Normalform .............*/
+const normalform2 = document.getElementById("normalform2");
+
+const tab2 = document.getElementById("tab2");
+const tab3 = document.getElementById("tab3");
+const tab4 = document.getElementById("tab4");
+
+tab2.style.display = "none";
+tab3.style.display = "none";
+tab4.style.display = "none";
+
+normalform2.addEventListener("click", () =>{ 
+
+    const initialtab = document.getElementById("tab1");
+    initialtab.style.display = "none";
+
+const tab2 = document.getElementById("tab2");
+const tab3 = document.getElementById("tab3");
+const tab4 = document.getElementById("tab4");
+
+tab2.style.display = "revert";
+tab3.style.display = "revert";
+tab4.style.display = "revert";
+
+
+});
+
+
+ 
+
