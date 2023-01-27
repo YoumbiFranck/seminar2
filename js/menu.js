@@ -11,42 +11,6 @@ const del = document.querySelector('.del')
 const cancel = document.querySelector(".cancel")
 
 
-
-
-
-/** Inhaltsverzeichnis**/
-/* 
-const windowHeight = window. innerHeight;
-const sections = document. querySelectorAll ('.section' );
-const navigation = document. querySelector ('.navigation');
-
-function resetSelection() {
-    for (let i = 0; i < navigation. children. length; i++){
-        navigation.children[i].classList. remove( 'selected');
-    }
-}
-
-window.addEventListener ('scroll', function() {
-    const scrollTop = window.scrollY;
-    sections.forEach(function(section, i) {
-        if (section.offsetTop < scrollTop + windowHeight / 2 && scrollTop < section.offsetTop + windowHeight / 2) {
-            resetSelection();
-            navigation.children[i].classList.add('selected');
-        }
-    });
-});
-
-navigation.querySelectorAll('li').forEach(function(item, i) {
-    item.addEventListener('click', function() {
-        resetSelection();
-        window.scrollTo({
-            top: i * windowHeight, behavior: "smooth"
-        });
-    });
-});
- */
-
-
 /** Anomalie in Rot anzeigen **/
 btn_show_anomaly.addEventListener("click", displayAnomaly);
 function displayAnomaly(){

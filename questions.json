@@ -12,7 +12,7 @@
     "choice1": "Keine 2 Felder haben den gleichen Inhalt",
     "choice2": "Es liegen nur atomar Atomar Attribute vor",
     "choice3": "Es müssen pro Relation mindestens 3 Schlüssel vorliegen",
-    "choice4": "jedes Attribut ist vollständig von einem Primärschlüssel abhängig",
+    "choice4": "Es darf keine funktionalen Abhängigkeiten zwischen Nichtschlüsselattributen bestehen. ",
     "answer": 4
   },
   {
